@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'master',
                     url: 'https://github.com/syam-ch/frontend-app.git',
-                    credentialsId: 'frontend tocken'
+                    credentialsId: '7184535f-c014-4ef9-8ffe-47a9b986676b'
             }
         }
 
