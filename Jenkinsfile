@@ -24,7 +24,7 @@ pipeline {
 
         stage('Deploy to S3 & Invalidate CloudFront') {
             steps {
-                withAWS(credentials: 'df20539f-aa4a-45ab-a9d9-7660ed26c31b', region: "${AWS_DEFAULT_REGION}") {
+                withAWS(credentials: '7184535f-c014-4ef9-8ffe-47a9b986676b', region: "${AWS_DEFAULT_REGION}") {
                     sh 'aws s3 sync build/ s3://$S3_BUCKET --delete'
                     sh 'aws cloudfront create-invalidation --distribution-id E1FYNFJLW218M0 --paths "/*"'
                 }
